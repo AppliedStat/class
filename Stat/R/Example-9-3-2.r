@@ -3,7 +3,7 @@
 #------------------------------------------------------
 
 # Read the data from the URL
-url = "https://raw.githubusercontent.com/appliedstat/course/master/Statistics/R/Table-9-3-5.txt"
+url = "https://raw.githubusercontent.com/appliedstat/class/master/Stat/R/Table-9-3-5.txt"
 mydata = read.table(url, header=TRUE)
 
 # Wrong version (without as.factor)
@@ -19,7 +19,7 @@ summary(OUT)
 #
 # Correct version (with as.factor)
 #
-url = "https://raw.githubusercontent.com/appliedstat/course/master/Statistics/R/Table-9-3-5.txt"
+url = "https://raw.githubusercontent.com/appliedstat/class/master/Stat/R/Table-9-3-5.txt"
 mydata = read.table(url, header=TRUE)
 mydata$position = as.factor(mydata$position) 
 
@@ -38,7 +38,7 @@ plot(OUT)
 #
 # Correct version (with as.factor)
 #
-url = "https://raw.githubusercontent.com/appliedstat/course/master/Statistics/R/Table-9-3-5.txt"
+url = "https://raw.githubusercontent.com/appliedstat/class/master/Stat/R/Table-9-3-5.txt"
 mydata = read.table(url, header=TRUE)
 attach(mydata) # For more convenience
 position = as.factor(position) 
