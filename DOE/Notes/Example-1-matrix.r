@@ -5,6 +5,13 @@
  y = mydata[,2]
  dim(mydata)
 
+
+Sxx = sum( (x-mean(x))^2 )
+Sxy = sum( (x-mean(x))*(y-mean(y)) )
+b1 = Sxy/Sxx
+b0 = mean(y) - b1*mean(x)
+c(b0,b1)
+
 #----------------------------
  lm( y ~ x)
 
