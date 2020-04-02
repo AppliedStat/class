@@ -37,7 +37,7 @@ E4
 A = E4 %*% A
 A
 
-# (5) E5: operation for (-7)*R2 + R3 -> R3
+# (5) E5: operation for 7*R2 + R3 -> R3
 E5 = matrix( c(1,0,0,  0,1,7,  0,0,1), ncol=3)
 E5
 
@@ -45,9 +45,9 @@ A = E5 %*% A
 A
 
 # From A matrix above, we have the below (row-echelon form)
-# x1 + 2x2 + x3 = 3
-#       x2 + x3 = 2
-#            x3 = 4
+# x1 + 2*x2 + x3 = 3
+#        x2 + x3 = 2
+#             x3 = 4
 
 
 
