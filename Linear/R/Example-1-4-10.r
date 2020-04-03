@@ -2,10 +2,12 @@
 # We will solve this Example using Def. 1.4.1 on Page 52.
 
 # B = (A|b): augmented coefficient matrix
-B = matrix( c(1,-1,2,  4,-2,2, 3,0,3,  12,-12,8), ncol=4)
+A = matrix( c(1,-1,2,  4,-2,2, 3,0,3), ncol=3)
+b = c(12,-12,8)
+B = cbind(A,b)
 
 # ========================
-# Gauss Elimination 
+# Gauss-Jordan Elimination 
 # ========================
 
 # (1a) E1a: operation for R1 + R2 -> R2
@@ -65,4 +67,11 @@ E5b
 
 B = E5b %*% B
 B
+
+# ========================
+# Using solve() function
+# NOTE: it is not recommended for educational purpose
+# ========================
+solve(A,b)
+
 
