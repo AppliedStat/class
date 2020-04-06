@@ -5,6 +5,7 @@
 I4 = diag( c(1,1,1,1) )
 A = matrix( c(1,1,1,1,  0,1,2,3,  0,0,1,3,  0,0,0,1), ncol=4 )
 B = cbind(A, I4)
+B 
 
 # ============
 # Gauss-Jordan 
