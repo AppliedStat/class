@@ -12,14 +12,14 @@ B = cbind(A,b)
 # Gauss Elimination 
 # ========================
 
-# (1) E1: operation for -3R1 + R2 -> R2
+# (1) E1: operation for (-3)*R1 + R2 -> R2
 E1 = matrix( c(1,-3,0,  0,1,0,  0,0,1), ncol=3 )
 E1 
 
 B = E1 %*% B 
 B 
 
-# (2) E2: operation for -2R1 + R3 -> R3
+# (2) E2: operation for (-2)*R1 + R3 -> R3
 E2 = matrix( c(1,0,-2,  0,1,0,  0,0,1), ncol=3 )
 E2 
 

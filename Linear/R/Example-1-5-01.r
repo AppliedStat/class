@@ -25,11 +25,9 @@ E3inv = matrix( c(1,0,0, 0,1,+3, 0,0,1), ncol=3 )
 L1 = E1inv %*% E2inv %*% E3inv 
 
 # Double-cehck
-L1
-U1
+L1; U1
 L1 %*% U1 
 A 
-
 
 ################################################
 # Note: all the diagonal elements in the above L1 are one. 
@@ -60,13 +58,10 @@ E6inv = matrix( c(1,0,0, 0,1,0, 0,0,-2), ncol=3 )
 L2 = E1inv %*% E2inv %*% E3inv %*% E4inv %*% E5inv %*% E6inv
 
 # Double-cehck
-L2
-U2
+L2; U2
 L2 %*% U2 
 A 
 
 ################################################
 # Note: all the diagonal elements in the above U2 are one. 
 ################################################
-
-
