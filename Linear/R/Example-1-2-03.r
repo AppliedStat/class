@@ -18,9 +18,9 @@ t(A)
 # (2) 
 # ----------------------------------------------
 # Either one is OK
- matrix( c(1,0,2,  -3,1,4),   nrow=3)
- matrix( c(1,-3,  0,1,  2,4), nrow=3, byrow=T)
- matrix( c(1,0,2,  -3,1,4),   ncol=2)
+ matrix( c(1, 0,2, -3,1,4), nrow=3)
+ matrix( c(1,-3,0,  1,2,4), nrow=3, byrow=T)
+ matrix( c(1, 0,2, -3,1,4), ncol=2)
 
 A = matrix( c(1,0,2,  -3,1,4),   ncol=2)
 t(A) # transpose of A
