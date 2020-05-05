@@ -16,12 +16,24 @@ A3[,3] = b
 # Compare A, A1, A2, A3
 A; A1; A2; A3
 
+# Find x1, x2, x3 using Cramer's rule
 x1 = det(A1)/det(A)
 x2 = det(A2)/det(A)
 x3 = det(A3)/det(A)
 
 c(x1,x2,x3)
 
+x = c(x1,x2,x3)
+x
+
+
+# ===============================================
+# Using the inverse matrix
+# -----------------------------------------------
+Ainv = solve(A)  
+x = Ainv %*% b
+x   # Matrix form
+as.vector(x)
 
 
 # ===============================================
