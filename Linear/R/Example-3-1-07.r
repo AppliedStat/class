@@ -63,6 +63,9 @@ vector.norm ( cross.product(a,b) )
 tmp = cross.product(a,b) 
 sum( tmp*a )
 
+# Recall: dot.product from Example 3.1.5
+dot.product = function(x,y) sum(x*y)
+
 dot.product( cross.product(a,b), a )
 
 # (a x b) . b
