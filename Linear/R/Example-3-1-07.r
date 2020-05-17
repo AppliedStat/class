@@ -35,7 +35,7 @@ sum(a*b)
 cross.product(b,a)
 
 
-# NOTE: compare cross.product(b,a) and cross.product(a,b)
+# NOTE: Compare cross.product(b,a) and cross.product(a,b).
 # Check the below
 cross.product(b,a) + cross.product(a,b)
 
@@ -46,7 +46,7 @@ tmp = cross.product(a,b)
 
 sqrt( sum(tmp^2) )
 
-# comare the above with the textbook:sqrt(24)
+# Compare the above with the textbook:sqrt(24)
 sqrt(24)
 
 # Using a vector.norm function from Example 3.1.1 on Page 123
