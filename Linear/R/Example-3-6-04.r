@@ -11,10 +11,10 @@ R2 = I4[2,]
 R3 = I4[3,]
 R4 = I4[4,]
 
-E1 = rbind(R1, R3, R2,       R4)
-E2 = rbind(R1, R2, -2*R2+R3, -R2+R4) 
-E3 = rbind(-R2+R1, R2, R3/3, R4)
-E4 = rbind(-R3+R1, R2, R3,   R4)
+E1 = rbind(R1, R3,           R2,         R4)
+E2 = rbind(R1, R2,   (-2)*R2+R3, (-1)*R2+R4) 
+E3 = rbind(-R2+R1, R2, (1/3)*R3,         R4)
+E4 = rbind(-R3+R1, R2,       R3,         R4)
 
 B = E4 %*% E3 %*% E2 %*% E1
 
@@ -28,12 +28,11 @@ C3 = I5[,3]
 C4 = I5[,4]
 C5 = I5[,5]
 
-E1 = cbind(C1, C2, C3, -4/3*C1+C4, 2/3*C1+C5)
-E2 = cbind(C1, C2, C3, -C2+C4,      -C2+C5)
-E3 = cbind(C1, C2, C3, 1/3*C3+C4,   1/3*C3+C5)
+E1 = cbind(C1, C2, C3, (-4/3)*C1+C4, (2/3)*C1+C5)
+E2 = cbind(C1, C2, C3,   (-1)*C2+C4,  (-1)*C2+C5)
+E3 = cbind(C1, C2, C3,  (1/3)*C3+C4, (1/3)*C3+C5)
 
 C = E1 %*% E2 %*% E3
-
 
 
 ##########################
