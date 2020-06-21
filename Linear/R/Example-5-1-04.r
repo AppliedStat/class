@@ -27,3 +27,19 @@ vec3
 vec3 * sqrt(2)  # R normalizes vec3. Note: vec2 and vec3 are dependent.
 
 # Using the above, we can obtain the basis of the eigen space of A matrix
+
+
+###################################
+# See Section 5.2
+# Diagonalizable? No!
+# Check below:
+
+P = EI$vectors
+Pinv = solve(P)
+
+D = Pinv %*% A %*% P
+D
+
+
+
+

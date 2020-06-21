@@ -45,8 +45,9 @@ E2 = rbind(R1, 3*R1+R2, -3*R1+R3, -4*R1+R4)
 E3 = rbind(R1, R2, R2+R3, (-1/10)*R4)
 E4 = rbind(R1, (1/7)*R2, R3, R4)
 E5 = rbind(R1, R2, R3, -R2+R4) 
-E6 = rbind(-8*R3+R1, -3*R3+R2, R3, R4)
-E7 = rbind(-2*R2+R1, R2, R3, R4)
+E6 = rbind(-8*R3+R1, -3*R3+R2, R3, R4)  # -3*R3+R2 -> R2 & -8*R3+R1 -> R1  
+                                        # -2*R2+R1 -> R1 should be in the next step.
+E7 = rbind(-2*R2+R1, R2, R3, R4)         
 
 # Try
 E1 %*% B
