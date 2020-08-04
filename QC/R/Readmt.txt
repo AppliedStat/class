@@ -1,0 +1,12 @@
+For factors, see  rQCC R package. For example, try the below.  
+
+> install.packages("rQCC")
+
+> library("rQCC")
+
+> help("factors.cc", package="rQCC")
+
+> vignette("factors.cc", package="rQCC")
+
+
+
