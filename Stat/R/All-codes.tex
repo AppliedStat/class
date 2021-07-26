@@ -1,0 +1,134 @@
+%% http://en.wikibooks.org/wiki/LaTeX/Packages/Listings 
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/listings/
+\documentclass[11pt,a4paper]{article}
+\usepackage{listings}
+%----------------------------------
+\headheight -2.0cm
+\headsep     10pt
+\textheight 250mm
+\pagestyle{empty}
+\parindent 0pt
+\oddsidemargin   5mm
+\evensidemargin  5mm
+\textwidth  155mm
+\renewcommand{\baselinestretch}{1.2}
+%----------------------------------
+\usepackage{color}
+\definecolor{magenta2}{rgb}{0.5, 0.0, 0.0}
+\definecolor{dkblue}{rgb}{0.0, 0, 0.5}
+\definecolor{dkgreen}{rgb}{0, 0.3, 0}
+\definecolor{mauve}{rgb}{0.5, 0, 0.8}
+
+\lstset{
+language=R, 
+basicstyle=\scriptsize\ttfamily, 
+commentstyle=\ttfamily\color{dkgreen}, 
+%%stringstyle=\color{magenta}, 
+stringstyle=\color{mauve}, 
+numbers=left, 
+numberstyle=\tiny\ttfamily\color{dkblue}, 
+stepnumber=1,
+numbersep=10pt, backgroundcolor=\color{white},
+showspaces=false, showstringspaces=false, showtabs=false, frame=single,
+tabsize=2, 
+breaklines=true, breakatwhitespace=true, 
+title=\lstname,
+escapeinside={}, keywordstyle={}, morekeywords={}
+captionpos=t,  %% captionpos=b
+}
+%----------------------------------
+
+%=========================================================================
+\begin{document}
+
+\section*{Chapter 1 (R programs)}
+\lstinputlisting{Example-1-1-1.r}
+\lstinputlisting{Example-1-1-2.r}
+\lstinputlisting{Example-1-2-4.r}
+\lstinputlisting{Example-1-2-9.r}
+%%\clearpage
+\lstinputlisting{Example-1-4-6-advanced.r}
+\lstinputlisting{Example-1-4-6.r}
+
+\clearpage
+\section*{Chapter 2 (R programs)}
+\lstinputlisting{Example-2-1-7.r}
+\lstinputlisting{Example-2-4-7.r}
+\lstinputlisting{Figure-2-4-1.r}
+\lstinputlisting{Example-2-5-4.r}
+\lstinputlisting{Example-2-6-1.r}
+\lstinputlisting{Example-2-6-2.r}
+\lstinputlisting{Example-2-6-5.r}
+
+\clearpage
+\section*{Chapter 3 (R programs)}
+\lstinputlisting{Example-3-2-1.r}
+\lstinputlisting{Example-3-2-2.r}
+\lstinputlisting{Example-3-2-4.r}
+\lstinputlisting{Example-3-2-6.r}
+\lstinputlisting{Example-3-2-9.r}
+%
+\lstinputlisting{Example-3-3-3.r}
+\lstinputlisting{Example-3-3-4.r}
+\lstinputlisting{Example-3-3-5.r}
+\lstinputlisting{Example-3-3-6.r}
+\lstinputlisting{Example-3-3-7.r}
+
+
+\clearpage
+\lstinputlisting{Example-6-1-1.r}
+\lstinputlisting{Example-6-1-3.r}
+\lstinputlisting{Example-6-1-4.r}
+\lstinputlisting{Example-6-1-5.r}
+\lstinputlisting{Example-6-2-2.r}
+\lstinputlisting{Example-6-2-3.r}
+\lstinputlisting{Example-6-2-4.r}
+\lstinputlisting{Example-6-2-5.r}
+\lstinputlisting{Example-6-3-3.r}
+\lstinputlisting{Example-6-3-4.r}
+\lstinputlisting{Example-6-3-5.r}
+\lstinputlisting{Example-6-4-4.r}
+\lstinputlisting{Example-6-5-1.r}
+
+
+
+\clearpage
+\section*{Chapter 7 (R programs)}
+\lstinputlisting{Example-7-1-4.r}
+\lstinputlisting{Example-7-1-5.r}
+\lstinputlisting{Example-7-2-3.r}
+\lstinputlisting{Example-7-2-4.r}
+\lstinputlisting{Example-7-3-1.r}
+
+
+\clearpage
+\section*{Chapter 8 (R programs)}
+\lstinputlisting{Example-8-2-1.r}
+\lstinputlisting{Example-8-2-2.r}
+\lstinputlisting{Example-8-2-3.r}
+\lstinputlisting{Example-8-5-1.r}
+\lstinputlisting{Example-8-5-2.r}
+\lstinputlisting{Figure-8-5-2.r}
+\lstinputlisting{Example-8-5-3.r}
+
+
+\clearpage
+\section*{Chapter 9 (R programs)}
+\lstinputlisting{Example-9-1-1.r}
+\lstinputlisting{Example-9-1-2.r}
+\lstinputlisting{Example-9-1-3.r}
+\lstinputlisting{Example-9-1-4.r}
+\lstinputlisting{Example-9-2-1.r}
+\lstinputlisting{Example-9-2-2.r}
+\lstinputlisting{Example-9-2-3.r}
+\lstinputlisting{Example-9-3-2.r}
+
+
+
+%=======================================
+\clearpage
+\section*{Tables in Appendix (R programs)}
+\lstinputlisting{Appendix-B-Table-IV.r}
+\lstinputlisting{Appendix-B-Table-V.r}
+
+\end{document}
