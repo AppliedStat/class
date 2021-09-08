@@ -2,7 +2,6 @@
 ## Example 6.3-3 on Page 259
 ## --------------------------
 
-## NOTE: http://integrals.wolfram.com/index.jsp
 
 g1 = function(y) { 10 * y   * (1-y^2)^4 }
 g2 = function(y) { 40 * y^3 * (1-y^2)^3 }
@@ -33,6 +32,7 @@ g5 = function(y) { 10 * y^9 }
 
 
 ##-------------------------------------------------------------
+## NOTE: http://integrals.wolfram.com/index.jsp
 
 G1 = function(y) { 1 - (1-y^2)^5 }
 G2 = function(y) { y^4 * ( -4*y^6 + 15*y^4 -20*y^2 + 10) }
