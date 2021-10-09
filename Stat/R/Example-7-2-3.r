@@ -34,12 +34,12 @@ par( mfrow=c(1,2) )
 
 pdf = dt( seq(-3,3, by=0.1), df=22 )
  hist(T, probability=TRUE, nclass=20 )
-lines(seq(-3,3, by=0.1), pdf, type="l", col="red", add=TRUE )
+lines(seq(-3,3, by=0.1), pdf, type="l", col="red")
 
 qt22 = qt( ppoints(N), df=22)
-  qqplot(T, qt22, xlim=c(-3,3), ylim=c(-3,3), pch=20)
-  abline(h=0, v=0, lty=3)
-  abline(a=0, b=1, lty=1, col="red")
+qqplot(T, qt22, xlim=c(-3,3), ylim=c(-3,3), pch=20)
+abline(h=0, v=0, lty=3)
+abline(a=0, b=1, lty=1, col="red")
 
 #
 # Figure 7.2-1 (b): T(19) quantiles versus T order statistics
@@ -48,12 +48,12 @@ par( mfrow=c(1,2) )
 
 pdf = dt( seq(-3,3, by=0.1), df=19 )
  hist(W, probability=TRUE, nclass=20) 
-lines(seq(-3,3, by=0.1), pdf, type="l", col="red", add=TRUE )
+lines(seq(-3,3, by=0.1), pdf, type="l", col="red")
 
 qt19 = qt( ppoints(N), df=19)
-  qqplot(W, qt19, xlim=c(-3,3), ylim=c(-3,3), pch=20)
-  abline(h=0, v=0, lty=3)
-  abline(a=0, b=1, lty=1, col="red")
+qqplot(W, qt19, xlim=c(-3,3), ylim=c(-3,3), pch=20)
+abline(h=0, v=0, lty=3)
+abline(a=0, b=1, lty=1, col="red")
 
 
 ## ====================================================
@@ -91,13 +91,13 @@ for ( i in 1:N ) {
 par( mfrow=c(1,2) )
 
 pdf = dt( seq(-3,3, by=0.1), df=22 )
-hist(T, probability=TRUE, nclass=20, ylim=c(0,max(pdf)) )
-  lines(  seq(-3,3, by=0.1), pdf, type="l", col="red", add=TRUE )
+ hist(T, probability=TRUE, nclass=20, ylim=c(0,max(pdf)) )
+lines(seq(-3,3, by=0.1), pdf, type="l", col="red")
 
 qt22 = qt( ppoints(N), df=22)
-  qqplot(T,qt22, xlim=c(-3,3), ylim=c(-3,3), pch=20 )
-  abline(h=0, v=0, lty=3)
-  abline(a=0, b=1, lty=1, col="red")
+qqplot(T,qt22, xlim=c(-3,3), ylim=c(-3,3), pch=20 )
+abline(h=0, v=0, lty=3)
+abline(a=0, b=1, lty=1, col="red")
 
 
 #
@@ -107,12 +107,12 @@ qt22 = qt( ppoints(N), df=22)
 par( mfrow=c(1,2) )
 
 pdf = dt( seq(-3,3, by=0.1), df=5 )
-hist(W, probability=TRUE, nclass=20, ylim=c(0,max(pdf)) ) 
-  lines(  seq(-3,3, by=0.1), pdf, type="l", col="red", add=TRUE )
+ hist(W, probability=TRUE, nclass=20, ylim=c(0,max(pdf)) ) 
+lines(seq(-3,3, by=0.1), pdf, type="l", col="red")
 
 
 qt5 = qt( ppoints(N), df=5)
-  qqplot(W,qt5, xlim=c(-3,3), ylim=c(-3,3), pch=20 )
-  abline(h=0, v=0, lty=3)
-  abline(a=0, b=1, lty=1, col="red")
+qqplot(W,qt5, xlim=c(-3,3), ylim=c(-3,3), pch=20 )
+abline(h=0, v=0, lty=3)
+abline(a=0, b=1, lty=1, col="red")
 
