@@ -43,7 +43,7 @@ abline(h=0, v=0, col="green")
 # The higher correlation between z and z, 
 # the more likely x belongs to the normal dist.
 
-# Let's compare y and z
+# Let's compare y and z. 
 
 qqplot(y,z)
 
