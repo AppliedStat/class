@@ -22,15 +22,15 @@ t.stat = (wbar-mu0)/(s/sqrt(n))
 t.stat 
 
 #
-alpha = 0.05
+alpha1 = 0.05
 
-critical.value1 = qt(1-alpha, df=n-1)
+critical.value1 = qt(1-alpha1, df=n-1)
 critical.value1
 
 #
-alpha = 0.10
+alpha2 = 0.10
 
-critical.value2 = qt(1-alpha, df=n-1)
+critical.value2 = qt(1-alpha2, df=n-1)
 critical.value2
 
 # Summary
@@ -44,4 +44,14 @@ critical.value2
 #------------------------------------
 p.value =  1-pt(t.stat, df=n-1) 
 p.value  # which is 0.07190197
+
+
+#======================================================
+# If one really wants to use an interpolation, 
+#     one can use two critical values and two significance levels.
+#------------------------------------------------------
+approx( x=c(critical.value1,critical.value2), y=c(alpha1,alpha2), xout=t.stat)
+
+
+
 
