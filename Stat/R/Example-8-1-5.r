@@ -54,4 +54,9 @@ approx( x=c(critical.value1,critical.value2), y=c(alpha1,alpha2), xout=t.stat)
 
 
 
+#======================================================
+# Using t.test() R function
+#------------------------------------------------------
+t.test(w, alternative="greater")
+
 
