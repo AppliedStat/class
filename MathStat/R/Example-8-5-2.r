@@ -14,7 +14,9 @@ MU = seq(60, 68, length=81)
 plot(MU, K(MU), xlim=c(58,68), ylim=c(0,1),  type="l" )
 
 
-# Empirical power (through simulation)
+#------------------------------------------------------
+# Advanced: empirical power (through simulation)
+#------------------------------------------------------
 ITER = 500
 n=25; sigma=10; MU = seq(60, 68, length=81)
 power = numeric(length(MU)) 
@@ -29,6 +31,28 @@ for ( j in 1:length(MU) ) {
 # Compare the empirical power with the theoretical power 
 plot(MU, K(MU), xlim=c(58,68), ylim=c(0,1),  type="l" )
 lines(MU, power, col="red")
+
+
+
+#------------------------------------------------------
+# Compare two power curves
+#------------------------------------------------------
+K1 = function(mu) {
+  1 - pnorm( (62-mu)/2 )
+}
+#
+K2  = function(mu) {
+  1 - pnorm( (63.29-mu)/2 )
+}
+
+#
+MU = seq(60, 68, length=81)
+
+ plot(MU, K1(MU), xlim=c(58,68), ylim=c(0,1),  type="l" )
+lines(MU, K2(MU), col="red")
+abline(h=c(0.1587, 0.05), lty=2, col="gold")
+
+
 
 
    
