@@ -13,7 +13,6 @@ MU = seq(60, 68, length=81)
 
 plot(MU, K(MU), xlim=c(58,68), ylim=c(0,1),  type="l" )
 
-
 #------------------------------------------------------
 # Advanced: empirical power (through simulation)
 #------------------------------------------------------
@@ -31,8 +30,6 @@ for ( j in 1:length(MU) ) {
 # Compare the empirical power with the theoretical power 
 plot(MU, K(MU), xlim=c(58,68), ylim=c(0,1),  type="l" )
 lines(MU, power, col="red")
-
-
 
 #------------------------------------------------------
 # Compare two power curves
@@ -53,6 +50,14 @@ lines(MU, K2(MU), col="red")
 abline(h=c(0.1587, 0.05), lty=2, col="gold")
 
 
+#=======================================================
+# Textbook Page 404
+# Determine rejection region (c) and sample size (n)
+#   alpha=0.025; beta=0.05; mu0=60; mu=65
+#-------------------------------------------------------
+n = 4* (qnorm(1-alpha)-qnorm(beta))^2
+ceiling(n)
 
+critical = (mu*qnorm(1-alpha)-mu0*qnorm(beta))/(qnorm(1-alpha)-qnorm(beta))
+critical
 
-   
