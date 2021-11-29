@@ -27,7 +27,6 @@ cbind(DATA, xbar, s, R)
 cbind(DATA, xbar, round(s,3), R)
 
 
-
 # ==================
 # xbar chart with S 
 # ==================
@@ -44,8 +43,6 @@ c(LCL, CL , UCL)
 
 
 
-
-
 # ==================
 # S chart 
 # ==================
@@ -57,8 +54,6 @@ CL  = sbar
 LCL = sbar * B3
 
 c(LCL, CL , UCL)
-
-
 
 
 
