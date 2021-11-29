@@ -117,7 +117,7 @@ rcc(DATA, type="S")
 
 CC = rcc(DATA, type="S")
 print(CC)
-plot(CC)   # Figure 9.7-2 (b)
+ plot(CC)   # Figure 9.7-2 (b)
 
 
 # double-check
