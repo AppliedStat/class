@@ -72,7 +72,7 @@ factors.cc(n=20,"D4")
 ## --------------------------
 help("rcc")
 
-# Data
+# Data from Table 9.7.2
  x1 = c(1.2, 1.8, 1.7, 1.3, 1.4) ## 1.480 0.259 0.60
  x2 = c(1.5, 1.2, 1.0, 1.0, 1.8) ## 1.300 0.346 0.80
  x3 = c(0.9, 1.6, 1.0, 1.0, 1.0) ## 1.100 0.283 0.70
@@ -85,6 +85,11 @@ help("rcc")
 x10 = c(1.6, 1.5, 1.4, 1.3, 1.5) ## 1.460 0.114 0.30
 DATA = rbind(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10)
 #
+
+# Table 9.7.2 (xbar, s and R)
+ xbar = apply(DATA, 1, mean)
+ s    = apply(DATA, 1, sd)
+ R    = apply(DATA, 1, function(x) diff(range(x)) )
 
 
 # ==================
