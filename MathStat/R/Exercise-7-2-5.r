@@ -18,7 +18,7 @@ Y = c(
 9.50, 8.30, 7.05, 8.30, 7.95, 9.60)
 
 Sx =sd(X);  Sy =sd(Y)
-Sx2=var(S); Sy2=var(Y)
+Sx2=var(X); Sy2=var(Y)
 n=length(X); m=length(Y)
 xbar=mean(X); ybar=mean(Y)
 
