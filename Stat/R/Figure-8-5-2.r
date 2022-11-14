@@ -26,6 +26,7 @@ K3 = 1-pnorm( 61.645-mu )
 plot (mu, K1, type="l", xlim=c(58,68), ylim=c(0,1), col="blue" )
 lines(mu, K2, col="red")
 lines(mu, K3, col="black", lty=2)
+abline(h=0.05, col="gold")
 
 
 #========================================================================
