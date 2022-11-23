@@ -8,8 +8,6 @@ K = function(p, x, n) {
 
 pp = seq(0, 0.5, length=51)
 
-K(pp, n=20)
-
 
 # Figure 8.5-1 
 plot(pp, K(pp,x=6,n=20), type="l" )
