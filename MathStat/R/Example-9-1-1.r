@@ -1,3 +1,4 @@
+
 #======================================================
 # Example 9.1.1 on Page 425
 #   Test H0: random versus H1: not random
@@ -7,17 +8,19 @@ data = c(5,8,3,1,9,4,6,7,9,2,6,3,0,
          3,7,1,4,6,0,4,3,8,2,7,3,9,
          8,5,6,1,8,7,0,3,5,2,5,2)
 dist = diff(data)
+length(data)
 
 # Check "SAME"
-sum( dist==0 )  ## dangerous
-sum( ( dist^2 < 0.0001) )   # better
+sum( dist==0 )          # dangerous
+sum( dist^2 < 0.001 )   # better
 
 # Check One away 
-sum( abs(dist) == 1 )   ## dangerous
-sum(  (abs(dist)-1) < 0.00001 )   ## better 
+sum( abs(dist)==1 | abs(dist)==9 )                      # dangerous
+sum( abs(abs(dist)-1)<0.001 | abs(abs(dist)-9)<0.001 )  # better 
 
 # Check Other 
-sum(  (abs(dist)-1) >= 0.00001   )   ## better 
+sum(  (abs(dist)-1)>=0.001 )   #  not good (actually wrong)
+sum(  (abs(dist)-1)>=0.001 & abs(abs(dist)-9)>=0.001    ) ## better 
 
 #------------------------------------------------------
 y1=0; y2=8; y3=42
