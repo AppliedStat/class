@@ -1,5 +1,5 @@
 ---
-# [Course](https://appliedstat.github.io/teaching/) Materials for Engineering Linear Algebra
+# [Course](https://appliedstat.github.io/class/) Materials for Engineering Linear Algebra
 
 ## R: R program files
 
