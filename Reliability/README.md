@@ -1,3 +1,3 @@
-# [Course](https://appliedstat.github.io/teaching/) Materials for Engineering Reliability class
+# [Course](https://appliedstat.github.io/class/) Materials for Engineering Reliability class
 
 
