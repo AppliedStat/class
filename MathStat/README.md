@@ -1,5 +1,5 @@
 ---
-# [Course](https://appliedstat.github.io/teaching/) Materials for Mathematical Statistics
+# [Course](https://appliedstat.github.io/class/) Materials for Mathematical Statistics
 
 ## R: R program files
 
