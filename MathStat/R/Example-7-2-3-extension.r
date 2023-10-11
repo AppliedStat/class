@@ -40,7 +40,7 @@ abline(a=-1.9689, b=0.1975, col="red")
 abline(h=0, v=0, col="green")
 
 # shapiro.test is based on this idea. 
-# The higher correlation between z and z, 
+# The higher correlation between x and z, 
 # the more likely x belongs to the normal dist.
 
 # Let's compare y and z. 
