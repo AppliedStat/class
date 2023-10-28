@@ -21,4 +21,11 @@ S
 det(S)
 
 
+# Extra
+qr(X)$rank 
+
+
+
+
+
 
