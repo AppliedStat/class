@@ -14,7 +14,7 @@ n = nrow(X)
 S = 1/(n-1) * t(X.demeaned) %*% X.demeaned 
 S
 
-# Or,  we can calcuate S using var() function. 
+# Or, we can calculate S using cov() function. 
 S = cov(X)
 S 
 
