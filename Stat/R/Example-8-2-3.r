@@ -17,6 +17,11 @@ Z = ( mean(X)-mean(Y) ) / sqrt( var(X)/length(X) + var(Y)/length(Y) )
 p.value = pnorm(Z)  # p-value
 c(Z, p.value)
 
+boxplot(Y,X, horizontal=TRUE)
+
+
+
+
 
 # Welch Two Sample t-test
 t.test(X,Y, alternative="less", var.equal=FALSE)
