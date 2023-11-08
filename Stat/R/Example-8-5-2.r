@@ -53,8 +53,9 @@ abline(h=c(0.1587, 0.05), lty=2, col="gold")
 #=======================================================
 # Textbook Page 404
 # Determine rejection region (c) and sample size (n)
-#   alpha=0.025; beta=0.05; mu0=60; mu=65
 #-------------------------------------------------------
+alpha=0.025; beta=0.05; mu0=60; mu=65
+
 n = 4* (qnorm(1-alpha)-qnorm(beta))^2
 ceiling(n)
 
