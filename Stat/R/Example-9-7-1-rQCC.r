@@ -2,14 +2,13 @@
 # Using rQCC package
 #######################
 
-install.packages("rQCC")
+# install.packages("rQCC")
 news(package="rQCC")
 
 vignette("rcc", package="rQCC")
 vignette("factors.cc", package="rQCC")
 
 help(package="rQCC")
-
 
 library("rQCC")
 
@@ -91,7 +90,6 @@ DATA = rbind(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10)
  s    = apply(DATA, 1, sd)
  R    = apply(DATA, 1, function(x) diff(range(x)) )
 
-
 # ==================
 # xbar chart with S (default in rcc function)
 # ==================
@@ -111,9 +109,6 @@ UCL = xbarbar + A3 * sbar
  CL = xbarbar
 LCL = xbarbar - A3 * sbar 
 c(LCL, CL , UCL)
-
-
-
 
 # ==================
 # S chart 
@@ -139,6 +134,9 @@ LCL = sbar * B3
 c(LCL, CL , UCL)
 
 
+## ==========================
+## Example 9.7-2 on Page 480 
+## --------------------------
 
 # ==================
 # xbar chart with R 
@@ -147,7 +145,7 @@ rcc(DATA, scale="range", type="R")
 
 CC = rcc(DATA, scale="range", type="R")
 print(CC)
-plot(CC)   # Figure 9.7-2 (b)
+plot(CC)   # Figure 9.7-3 (b)
 
 # double-check
 D3 = 0    # when n=5  (from Table 9.7-1)
