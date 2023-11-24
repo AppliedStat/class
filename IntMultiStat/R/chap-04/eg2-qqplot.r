@@ -19,7 +19,9 @@ snorm = function (n, mean = 0, sd = 1) {
 
 cut = 1.538 
 
-x1 = sample( snorm(1000) )
+# x1 = sample( snorm(1000) )
+x1 = rnorm(1000)
+
 x2 = x1
 x2[ abs(x1)< cut ] = -x1[ abs(x1)< cut ]
 
@@ -29,9 +31,11 @@ x2[ abs(x1)< cut ] = -x1[ abs(x1)< cut ]
 S = var( cbind(x1,x2) )
 round(S, 3)
 
+hist(x1)
 qqnorm(x1)
 qqline(x1, col="red")
 
+hist(x2)
 qqnorm(x2)
 qqline(x2, col="red")
 
