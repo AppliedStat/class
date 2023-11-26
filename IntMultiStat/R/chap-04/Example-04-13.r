@@ -1,5 +1,6 @@
 # Example 4.13 on Page 184 
 
+# Data from Exercise 1.4 on Page 38.
 data = read.table("https://raw.githubusercontent.com/AppliedStat/class/master/IntMultiStat/data/P1-4.DAT")
 
 x1 = data[[1]] 
