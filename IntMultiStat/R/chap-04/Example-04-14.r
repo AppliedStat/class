@@ -25,6 +25,9 @@ d2 = numeric(n)
 for ( j in 1:n  ) {
     d2[j] = t( X[j,]-xbar) %*% Sinv %*% (X[j,]-xbar)
 }
+# If we use mahalanobis() function, it is very convenient. 
+mahalanobis(X, center=xbar, cov=S)
+
 
 # q-q values   
 d2 = sort(d2)
