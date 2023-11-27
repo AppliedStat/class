@@ -134,32 +134,3 @@ LCL = sbar * B3
 c(LCL, CL , UCL)
 
 
-## ==========================
-## Example 9.7-2 on Page 480 
-## --------------------------
-
-# ==================
-# xbar chart with R 
-# ==================
-rcc(DATA, scale="range", type="R")
-
-CC = rcc(DATA, scale="range", type="R")
-print(CC)
-plot(CC)   # Figure 9.7-3 (b)
-
-# double-check
-D3 = 0    # when n=5  (from Table 9.7-1)
-D4 = 2.11
-
-D3 = factors.cc(n=5, "D3")
-D4 = factors.cc(n=5, "D4")
-
-Rbar = mean(R)
-
-LCL = Rbar * D3
-CL  = Rbar
-UCL = Rbar * D4
-
-c(LCL, CL, UCL)
-
-
