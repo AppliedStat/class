@@ -35,7 +35,7 @@ qchisq(1-0.05, df=2)
 # Compare Q2 with the above critical value
 #  Reject H0 
 
-#------------------------------------------------------
+#======================================================
 # Using R function
 chisq.test( x=c(0,8,42),  p=c(1/10, 2/10, 7/10) )
 
