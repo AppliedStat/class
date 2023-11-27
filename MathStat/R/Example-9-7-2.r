@@ -1,5 +1,5 @@
 ## ==========================
-## Example 9.7-1 on Page 478 
+## Example 9.7-2 on Page 480 
 ## --------------------------
 
 # Data
@@ -16,43 +16,40 @@ x10 = c(1.6, 1.5, 1.4, 1.3, 1.5) ## 1.460 0.114 0.30
 DATA = rbind(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10)
 #
 
-xbar = apply(DATA, 1, mean)
-
-s    = apply(DATA, 1, sd)
-
 RANGE = function(x) {diff(range(x))}
 R = apply(DATA, 1, RANGE)
-
-cbind(DATA, xbar, s, R)
-cbind(DATA, xbar, round(s,3), R)
+xbar = apply(DATA, 1, mean)
 
 
 # ==================
-# xbar chart with S 
+# xbar chart with R 
 # ==================
-xbarbar = mean(xbar) 
-sbar = mean(s)
+A2 = 0.58
 
-A3 = 1.43 # when n=5
+xbarbar = mean(xbar)
+Rbar = mean(R)
 
-UCL = xbarbar + A3 * sbar 
+UCL = xbarbar + A2 * Rbar
  CL = xbarbar
-LCL = xbarbar - A3 * sbar 
+LCL = xbarbar - A2 * Rbar
 
 c(LCL, CL , UCL)
 
 
 
-# ==================
-# S chart 
-# ==================
-B3 = 0    # when n=5
-B4 = 2.09
 
-UCL = sbar * B4
-CL  = sbar
-LCL = sbar * B3
+# ==================
+# R chart 
+# ==================
+D3 = 0    # when n=5 
+D4 = 2.11
 
-c(LCL, CL , UCL)
+Rbar = mean(R)
+
+LCL = Rbar * D3
+CL  = Rbar
+UCL = Rbar * D4
+
+c(LCL, CL, UCL)
 
 
