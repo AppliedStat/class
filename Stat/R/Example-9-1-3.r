@@ -14,6 +14,8 @@ Obs = c(13, 9, 6, 5, 7, 10)
 prob =c(sum(dpois(0:3,lambda=xbar)),dpois(4:7,lambda=xbar),1-ppois(7,lambda=xbar))
 Exp = n*prob
 
+rbind(Obs, prob, Exp)   # Table 9.1-1 on Page 428
+
 Q = sum(  (Obs-Exp)^2 / Exp  )
 Q 
 
