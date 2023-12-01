@@ -31,4 +31,25 @@ sum( tmp$values )
 
 
 
+# Correlations
+lambda1 = tmp$values[1]
+lambda2 = tmp$values[2]
+lambda3 = tmp$values[3]
+
+CorrY1.X1 = e1[1] * sqrt(lambda1) / sqrt( Sigma[1,1] )   # NB: +/- sign
+CorrY1.X1
+
+CorrY1.X2 = e1[2] * sqrt(lambda1) / sqrt( Sigma[2,2] )   # NB: +/- sign
+CorrY1.X2
+
+CorrY2.X1 = e2[1] * sqrt(lambda2) / sqrt( Sigma[1,1] ) 
+CorrY2.X1
+
+CorrY2.X2 = e2[2] * sqrt(lambda2) / sqrt( Sigma[2,2] ) 
+CorrY2.X2
+
+CorrY2.X3 = e2[3] * sqrt(lambda2) / sqrt( Sigma[3,3] ) 
+CorrY2.X3
+
+
 
