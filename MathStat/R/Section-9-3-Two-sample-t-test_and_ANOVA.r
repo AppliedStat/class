@@ -14,7 +14,7 @@ t.test(x,y, alternative="two.sided", var.equal=TRUE)
 # ==============================================
 # AOV-based 
 # ==============================================
-group = as.factor( c(rep(1,12), rep(2,12)) )
+group = factor( c(rep(1,12), rep(2,12)) )
 
 Yall = c(x,y)
 
@@ -59,7 +59,7 @@ mean of x mean of y
 #--------------------------
 Observations = c(x,y)
 Stud =  c(rep("No3",length(x)), rep("No4",length(y)) )
-Stud = as.factor(Stud)
+Stud = factor(Stud)
 
 aov (  Observations ~ Stud )
 myaov = aov (  Observations ~ Stud )
@@ -93,8 +93,8 @@ sp =  sqrt( ((n1-1)*sx2 + (n2-1)*sy2) / (n1+n2-2) )
 # Analyze again using ANOVA
 #--------------------------
 Observations = c(x,y)
-Hormone =  c(rep("X",length(x)), rep("Y",length(y)) )
-Hormone = as.factor(Hormone)
+Hormone = c(rep("X",length(x)), rep("Y",length(y)) )
+Hormone = factor(Hormone)
 
 aov (  Observations ~ Hormone )
 myaov = aov (  Observations ~ Hormone )
@@ -124,7 +124,7 @@ alternative hypothesis: true difference in means is not equal to 0
 #--------------------------
 Observations = c(x,y)
 Ball   =  c(rep("A",length(x)), rep("B",length(y)) )
-Golfer =  as.factor( c(1:length(x),  1:length(y)) )   # Blocking
+Golfer =  factor( c(1:length(x),  1:length(y)) )   # Blocking
 Distance = c(x,y)
 
 myaov = aov (Distance ~ Ball + Golfer)
