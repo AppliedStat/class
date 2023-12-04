@@ -2,13 +2,11 @@
 # Example 9.3.2 on Page 449
 #------------------------------------------------------
 
-url = "https://raw.githubusercontent.com/AppliedStat/class/master/MathStat/R/Table-9-3-5.txt"
-
-
 # Read the data from the URL
+url = "https://raw.githubusercontent.com/appliedstat/class/master/Stat/R/Table-9-3-5.txt"
 mydata = read.table(url, header=TRUE)
 
-# Wrong version (without as.factor)
+# Wrong version (without factor)
 par(mfrow=c(2,1))
 
 boxplot(force ~ position, horizontal=TRUE, data=mydata, xlab="force", ylab="position")
@@ -19,10 +17,11 @@ OUT = aov(force ~ position, data=mydata)
 summary(OUT)
 
 #
-# Correct version (with as.factor)
+# Correct version (with factor)
 #
+url = "https://raw.githubusercontent.com/appliedstat/class/master/Stat/R/Table-9-3-5.txt"
 mydata = read.table(url, header=TRUE)
-mydata$position = as.factor(mydata$position) 
+mydata$position = factor(mydata$position) 
 
 par(mfrow=c(2,1))
 
@@ -37,11 +36,12 @@ par(mfrow=c(2,2))
 plot(OUT)
 
 #
-# Correct version (with as.factor)
+# Correct version (with factor)
 #
+url = "https://raw.githubusercontent.com/appliedstat/class/master/Stat/R/Table-9-3-5.txt"
 mydata = read.table(url, header=TRUE)
 attach(mydata) # For more convenience
-position = as.factor(position) 
+position = factor(position) 
 
 par(mfrow=c(2,1))
 
