@@ -18,5 +18,3 @@ boxplot(time  ~ smoking * test)
 
 
 
-
-

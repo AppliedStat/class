@@ -6,7 +6,6 @@ set.seed(1)
 ITER = 10000  # The larger, the better
 x = sample(1:6, size=ITER, replace=TRUE)
 table(x) / ITER
-table( factor(x, levels=1:6)) / ITER # cosmetic
 
 
 # R Code for tossing two dice (sum of two)
@@ -15,7 +14,6 @@ ITER = 10000
 x = sample(1:6, size=ITER, replace=TRUE)
 y = sample(1:6, size=ITER, replace=TRUE)
 table(x+y) / ITER
-table( factor(x+y, levels=1:12)) / ITER # cosmetic
 
 
 #----------------------------------------------------------
@@ -27,7 +25,6 @@ set.seed(1)
 ITER = 10000
 x = sample(1:6, size=ITER, prob=c(0.1,0.1,0.1,0.2,0.2,0.3), replace=TRUE)
 table(x) / ITER
-table( factor(x, levels=1:6)) / ITER # cosmetic
 
 round( table(x) / ITER, 2)
 barplot( table(x) / ITER,  col=1:6) # cosmetic
@@ -39,10 +36,9 @@ ITER = 10000
 x = sample(1:6, size=ITER, prob=c(0.1,0.1,0.1,0.2,0.2,0.3), replace=TRUE)
 y = sample(1:6, size=ITER, prob=c(0.1,0.1,0.1,0.2,0.2,0.3), replace=TRUE)
 table(x+y) / ITER
-table( factor(x+y, levels=1:12)) / ITER # cosmetic
 
 round( table(x+y) / ITER, 2)
-barplot( table(x+y) / ITER,  col=1:12 ) # cosmetic
+barplot( table(x+y) / ITER,  col=2:12 ) # cosmetic
 
 
 #==========================================================
