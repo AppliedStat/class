@@ -11,12 +11,14 @@ x3 = log(data[[3]][index])
 
 X = cbind(x1, x2, x3)
 
-
 colMeans(X)
 
 var(X)
 
 OUT = prcomp(X)
+
+# Cumulative Proportion (%)
+cumsum( OUT$sdev^2 )  / sum( OUT$sdev^2 ) * 100
 
 
 # Note: compare prcomp(X) and eigen( var(X) )
