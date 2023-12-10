@@ -13,6 +13,9 @@ OUT1 = prcomp(X)
 # Note: compare prcomp(X) and eigen( var(X) )
 summary(OUT1)
 
+# Cumulative Proportion (%)
+cumsum( OUT1$sdev^2 )  / sum( OUT1$sdev^2 ) * 100
+
 # A scree plot with eigenvalues
 eigenvalues = OUT1$sdev^2
 plot(eigenvalues, type="l")
@@ -48,6 +51,7 @@ Sn = var(X) * (n-1)/n
 eigen(Sn)$values         # eigenvalues using Sn (MLE. biased)
 
 # So, eigenvalues are different, but eigenvectors are the same 
+# That is, princomp() uses the MLE of Sigma.
 
 
 
