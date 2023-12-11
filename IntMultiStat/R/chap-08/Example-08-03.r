@@ -9,6 +9,11 @@ colMeans(X)
 var(X)
 
 OUT1 = prcomp(X)
+OUT1 
+
+# The above is essentially the same as 
+eigen( var(X) )
+
 
 # Note: compare prcomp(X) and eigen( var(X) )
 summary(OUT1)
@@ -41,6 +46,7 @@ summary(OUT2)
 
 #---------------------------------
 
+# Let's compare the eigenvalues 
 OUT1[[1]]^2 
 OUT2[[1]]^2 
 
@@ -49,6 +55,7 @@ eigen( var(X) )$values   # eigenvalues using S (unbiased)
 n = nrow(X)
 Sn = var(X) * (n-1)/n
 eigen(Sn)$values         # eigenvalues using Sn (MLE. biased)
+# Now, the above is the same as OUT2[[1]]^2
 
 # So, eigenvalues are different, but eigenvectors are the same 
 # That is, princomp() uses the MLE of Sigma.
