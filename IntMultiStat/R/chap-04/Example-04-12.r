@@ -46,15 +46,13 @@ ellipse <- function(S=diag(c(1,1)), xbar=c(0,0), c2, resolution=100,plot=TRUE, a
    ellipse = t(xbar + sqrt(c2) * projmat %*% t(circle))
    if (plot == TRUE) {
        lines(ellipse)
-      if(axis==TRUE) {
-          tmp = eigen(S)
-          lam1 = tmp$values[1];  lam2 = tmp$values[2]
-          e1a  = tmp$vectors[,1]*sqrt(c2*lam1) + xbar
-          e1b  =-tmp$vectors[,1]*sqrt(c2*lam1) + xbar
-          e2a  = tmp$vectors[,2]*sqrt(c2*lam2) + xbar
-          e2b  =-tmp$vectors[,2]*sqrt(c2*lam2) + xbar
-          lines( c(e1a[1], e1b[1]), c(e1a[2], e1b[2]), col="blue")
-          lines( c(e2a[1], e2b[1]), c(e2a[2], e2b[2]), col="blue")
+       if(axis==TRUE) {
+          a1 = t(xbar + sqrt(c2) * projmat %*% c(1,0) )
+          a2 = t(xbar + sqrt(c2) * projmat %*% c(-1,0) )
+          b1 = t(xbar + sqrt(c2) * projmat %*% c(0,1) )
+          b2 = t(xbar + sqrt(c2) * projmat %*% c(0,-1) )
+          lines( c(a1[1], a2[1]), c(a1[2], a2[2]), col="cyan4")
+          lines( c(b1[1], b2[1]), c(b1[2], b2[2]), col="cyan4")
       }
    }
    return(ellipse)
