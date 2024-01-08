@@ -1,4 +1,12 @@
-Analysis of Incomplete Data in Competing Risks Model
+(1) Analysis of Incomplete Data in Competing Risks Model
+    URL:  https://ieeexplore.ieee.org/document/5221828
 
-URL:  https://ieeexplore.ieee.org/abstract/document/5221828
+
+(2) Parametric inference of incomplete data with competing risks among several groups 
+    URL:  https://ieeexplore.ieee.org/document/1282157
+
+
+(3) Parameter estimation of incomplete data in competing risks using the EM algorithm
+    URL:  https://ieeexplore.ieee.org/document/1435721
+
 
