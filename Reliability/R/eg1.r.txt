@@ -1,0 +1,58 @@
+
+#===========================================
+# Generating Data
+x1 = rweibull (1000, shape=2, scale=1)   
+x2 = exp( rnorm(1000) )   
+# Note: x1 and x2 > 0 
+#-------------------------------------------
+
+x1 = sort(x1)
+x2 = sort(x2)
+
+n = length(x1)
+p =  ( (1:n) - 0.5 ) / n 
+
+
+#===========================================
+# QQ plot (norm)
+# par ( mfrow=c(2,2) )
+
+# Try x1
+plot( x1, qnorm(p) ) 
+LM = lm( qnorm(p) ~ x1)
+abline(LM)
+
+# Try x1 with log-transform
+y1 = log(x1)
+plot( y1, qnorm(p) ) 
+LM = lm( qnorm(p) ~ y1)
+abline(LM)
+
+
+# Try x2
+plot( x2, qnorm(p) ) 
+LM = lm( qnorm(p) ~ x1)
+abline(LM)
+
+# Try x2 with log-transform
+y2 = log(x2)
+plot( y2, qnorm(p) ) 
+LM = lm( qnorm(p) ~ y2)
+abline(LM)
+
+
+#===========================================
+# Weibull plot 
+# par ( mfrow=c(1,2) )
+
+v = log( -log(1-p) ) 
+
+plot( log(x1), v ) 
+LM = lm( v ~ log(x1))
+abline(LM)
+
+plot( log(x2), v ) 
+LM = lm( v ~ log(x2))
+abline(LM)
+
+#----------------

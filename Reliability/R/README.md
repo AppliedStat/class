@@ -1,3 +1,2 @@
-# R files for Engineering Reliability class
-
+# R files for Reliability Engineering class
 
