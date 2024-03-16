@@ -8,10 +8,11 @@ x = c( 17,  31,  58,  66,  73,  73,  97, 108, 111, 117,
       197, 202, 223, 242, 246, 249, 260, 269, 276, 287, 
       298, 308, 312, 314, 316, 338, 349, 354, 423, 529 )
 
-
 n=length(x)
+
+## Weibull plot
 u = log( sort(x) )
-v = log(-log(1-ppoints(n,a=.5)))
+v = log(-log(1-ppoints(n,a=.5)))   
 
 
 plot(u,v)  # Different from the textbook
@@ -20,7 +21,7 @@ plot(u,v, xlab="Time",ylab="Cumulative Percent")
     # A little bit better, but still different from the textbook
 
 
-#=================================================================================
+#----------------------------------------------------------------------------
 plot(u,v, axes=FALSE, frame.plot=TRUE, xlab="Time",ylab="Cumulative Percent")
 # X-axis
 x.labels = c(1, 10, 100, 1000)
@@ -34,7 +35,7 @@ axis(2, las=2, at=y.values, labels=y.labels, cex.axis=0.8)
 
 # Still the above is not satisfactory. 
 
-#=================================================================================
+#----------------------------------------------------------------------------
 plot(u,v, axes=FALSE, frame.plot=TRUE, xlim=range(x.values), ylim=range(y.values), 
       xlab="Time",ylab="Cumulative Percent", col="red")
 axis(1,  at=x.values, labels=x.labels, cex.axis=0.8)
@@ -44,5 +45,24 @@ axis(2, las=2, at=y.values, labels=y.labels, cex.axis=0.8)
 
 LM = lm( v ~ u)
 abline(LM, col="blue")
+
+
+#=================================================================================
+# Using weibullness package below: 
+# https://appliedstat.github.io/R/R-package-1/
+# https://cran.r-project.org/web/packages/weibullness/
+
+install.packages("weibullness")
+library("weibullness")
+help(package="weibullness")
+
+wp.plot (x) 
+
+weibull.mle(x,threshold=0)   # MLE 
+
+weibull.wp(x)                # Using least squares from the Weibull plot
+
+
+
 
 
