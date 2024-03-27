@@ -11,7 +11,6 @@ n = length(x)
 
 hist(x, nclass=8, xlim=c(0,790) )   # Somewhat different from the textbook
 
-
 #----------------------------------
 breaks = seq(-10, 790, by=100)       
 hist(x, breaks=breaks, xlim=c(-10, 790) )   # Closer to the textbook
@@ -30,9 +29,8 @@ xx = seq(0,790, by=10)
 yy = dweibull(xx, shape=2.03, scale=223)
 lines(xx,yy)
 
-
 #----------------------------------
 # NOTE: the text book histogram is wrong 
 # Let's count the values between 90 and 190
-sum( x < 190 & x>90 )   # shows 23 > 20. 
+sum( x < 190 & x > 90 )   # shows 23 > 20. 
 

@@ -5,8 +5,8 @@
 
 xx = seq(0,40, l=101)
 f1 = dweibull(xx, shape=1,   scale=20) # shape (gamma=1) -> Exponential Dist.
-f2 = dweibull(xx, shape=3,   scale=20) # shape (gamma=1) -> Exponential Dist.
-f3 = dweibull(xx, shape=5.5, scale=20) # shape (gamma=1) -> Exponential Dist.
+f2 = dweibull(xx, shape=3,   scale=20) # 
+f3 = dweibull(xx, shape=5.5, scale=20) # 
 
 
 #===========================================

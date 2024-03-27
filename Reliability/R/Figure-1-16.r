@@ -53,6 +53,7 @@ abline(LM, col="blue")
 # https://cran.r-project.org/web/packages/weibullness/
 
 install.packages("weibullness")
+
 library("weibullness")
 help(package="weibullness")
 
@@ -61,8 +62,4 @@ wp.plot (x)
 weibull.mle(x,threshold=0)   # MLE 
 
 weibull.wp(x)                # Using least squares from the Weibull plot
-
-
-
-
 
