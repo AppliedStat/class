@@ -1,5 +1,5 @@
 # =================================
-# Example 4.20 on Page 282.
+# Example 4.20 on Page 281.
 # =================================
 
 # Original data set seems wrong
