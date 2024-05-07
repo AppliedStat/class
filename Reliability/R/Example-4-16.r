@@ -56,7 +56,7 @@ nl2 = function(par) {
 nlminb( start=c(1,1), nl2) # With No Warning.
 
 #=======================================================
-# MoM (Method-of-Moments) estimate
+# MoM (Method-of-Moments) estimate can be used as a starting value 
 #=======================================================
 gamma.hat = mean(x)^2 / var(x)
 theta.hat = var(x) / mean(x)
@@ -67,7 +67,37 @@ theta.hat
 nlminb( start=c(gamma.hat,theta.hat), nl2) # With No Warning.
 
 
+########################################################
+# Using Eq. (4.21) on Page 272
+########################################################
 
+EE = function(gamma) {
+     n = length(x)
+     n*(log(gamma)-log(mean(x))) - n*digamma(gamma) + sum(log(x))
+}
+
+SMALL = 0.01
+LARGE = 100 
+OUT = uniroot(EE, interval=c(SMALL, LARGE) )
+
+gamma.hat = OUT$root
+theta.hat = mean(x) / gamma.hat 
+
+gamma.hat
+theta.hat 
+
+
+# Graph of the estimating equation 
+GAMMA = seq(0.1, 5, by=0.1)
+EEVALUE = numeric(length(GAMMA))
+
+for ( i in seq_along(GAMMA) ) { 
+    EEVALUE[i] = EE(GAMMA[i])
+}
+
+
+plot(GAMMA, EEVALUE, type="l")
+abline(h=0, col="red")
 
 
 
