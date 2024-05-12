@@ -5,7 +5,8 @@
 x = c(14,18,18,20,21,22,22,20,17,17,15,13)
 
 muhat = mean(x)
-s2 = var(x)
+
+s2 = var(x)   # Note: it is not sigma2hat 
 
 n = length(x)
 sigma2 = sum( (x-muhat)^2 ) / n 
