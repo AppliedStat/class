@@ -2,7 +2,7 @@
 # Example 4.19 on Page 277.
 # =================================
 
-x = c(
+x = x0 = c(
 0.3103180, 0.4330840, 0.240185, 0.252469, 0.219205,
 0.3993390, 0.0491333, 0.271767, 0.272427, 0.203729,
 0.1635580, 0.6752440, 0.427734, 0.392823, 0.459576,
@@ -52,6 +52,7 @@ solve(I.hat)
 
 #######################################################################
 # The above results are noticeably different from the textbook results 
+# Double-check with a basic simulation
 #######################################################################
 
 gamma0 = gamma.hat 
@@ -68,11 +69,33 @@ for ( i in seq_len(ITER) ) {
     THETA[i] = out$par[2]
 }
 
+v11 = var(GAMMA)
+v12 = v21 = cov(GAMMA,THETA)
+v22 = var(THETA)
 
-var(GAMMA)
-var(THETA)
-cov(GAMMA,THETA)
+matrix( c(v11,v21,v12,v22), nrow=2)
 
+#######################################################################
+# The above results are noticeably different from the textbook results 
+# Double-check with Bootstrap simulation
+#######################################################################
+gamma0 = gamma.hat
+theta0 = theta.hat
 
+set.seed(1)
+ITER = 1000
+GAMMA = THETA = numeric(ITER)
 
+for ( i in seq_len(ITER) ) { 
+    x = x0[ sample(1:n, size=n, replace=TRUE) ]
+    out = nlminb( start=c(gamma0,theta0), nl2) # With No Warning.
+    GAMMA[i] = out$par[1]
+    THETA[i] = out$par[2]
+}
+
+v11 = var(GAMMA)
+v12 = v21 = cov(GAMMA,THETA)
+v22 = var(THETA)
+
+matrix( c(v11,v21,v12,v22), nrow=2)
 
