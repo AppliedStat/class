@@ -49,6 +49,8 @@ LM = lm (y1 ~ x1)
 
 plot(x1,y1)
 abline(LM)
+anova(LM)
+
 
 # Advanced 
 # Using the quadratic model.
@@ -57,6 +59,7 @@ LM2
 plot(x1,y1)
 tt = seq(0,100,l=101)
 lines( tt, 8.855e-03 +  3.575e-06 * tt^2 )
+anova(LM2)
 
 
 
