@@ -77,7 +77,7 @@ matrix( c(v11,v21,v12,v22), nrow=2)
 
 #######################################################################
 # The above results are noticeably different from the textbook results 
-# Double-check with Bootstrap simulation
+# Double-check with Bootstrap simulation (Ref: Section 4.6 on Page 288).
 #######################################################################
 gamma0 = gamma.hat
 theta0 = theta.hat

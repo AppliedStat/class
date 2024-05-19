@@ -2,8 +2,8 @@
 # Example 4.20 on Page 281.
 # =================================
 
-# Original data set seems wrong
-#   c(10,20,30,40,50,60,70,80,93,111)
+# Original data set below seems wrong: 
+#  c(10,20,30,40,50,60,70,80,93,111)
 
 data = c(10,20,30,40,50,60,70,80,90,103)
 n = length(data)
@@ -32,7 +32,7 @@ cbind(ti, hti*1000)
 
 #===========================================
 # Table 4.3 on Page 282
-#  Table 4.3 in the textbook seems wrong. 
+# Table 4.3 in the textbook seems wrong. 
 cbind(i, ti, ti1, Fti, Rti, fti, hti, hti*1000)
 
 plot(ti, hti)  ## quadratic model seems better.
@@ -57,7 +57,6 @@ LM2
 plot(x1,y1)
 tt = seq(0,100,l=101)
 lines( tt, 8.855e-03 +  3.575e-06 * tt^2 )
-
 
 
 
