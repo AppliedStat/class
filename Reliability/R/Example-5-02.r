@@ -45,9 +45,34 @@ pval = 2*min(1-pchisq(Br,df=r-1), pchisq(Br,df=r-1) )
 }
 #===================================
 
-
 Br.test(x)
 
 # Recall the original naive function
 Br.test0(x)
+
+#===================================
+# Using weibullness package
+#===================================
+install.packages("weibullness")
+require(weibullness)
+
+ep.test(x)
+ep.plot(x)
+
+#
+ep.plot(x^2)
+ep.test(x^2)
+
+
+
+#===================================
+# References
+#===================================
+# 26 Tests for exponentiality
+#  https://www.sciencedirect.com/science/article/abs/pii/S0169716184040281?via%3Dihub
+
+# Tests for Exponentiality: A Comparative Study
+# http://article.sciappliedmathematics.com/pdf/ajams-5-4-3.pdf 
+
+
 
