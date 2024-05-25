@@ -35,3 +35,24 @@ colnames(OUT) = c("alpha", "alpha(%)", "Coverage(%)",
 OUT
 
 
+#===================================
+# Using weibullness package
+#===================================
+install.packages("weibullness")
+require(weibullness)
+
+ep.test(x)
+ep.plot(x)
+
+#
+ep.plot(x^2)
+ep.test(x^2)
+
+#
+ep.plot(x^3)
+ep.test(x^3)
+
+#
+ep.plot(x^4)
+ep.test(x^4)
+
