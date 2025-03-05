@@ -15,6 +15,9 @@ sum(Inside) / N
 points( x[!Inside],y[!Inside], pch=".", col="red") 
 rect( -1,-1, 1, 1, border ="green4") 
 
+
+
+
 ## ==========================
 ## Example 1: Extra (Obtaining pi=3.14 using a circle)
 ## --------------------------
