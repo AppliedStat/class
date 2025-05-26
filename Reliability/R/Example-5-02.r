@@ -68,11 +68,10 @@ ep.test(x^2)
 #===================================
 # References
 #===================================
-# 26 Tests for exponentiality
-#  https://www.sciencedirect.com/science/article/abs/pii/S0169716184040281?via%3Dihub
+# 26 Tests for exponentiality (By Kjell A. Doksum and  Brian S. Yandell) 
+# https://doi.org/10.1016/S0169-7161(84)04028-1 
 
-# Tests for Exponentiality: A Comparative Study
-# http://article.sciappliedmathematics.com/pdf/ajams-5-4-3.pdf 
-
+# Tests for Exponentiality: A Comparative Study (By Mezbahur Rahman and Han Wu)
+# https://doi.org/10.12691/ajams-5-4-3
 
 
