@@ -1,5 +1,5 @@
 ## ==========================
-## Example 2.6-5 on Page 92 
+## Example 2.7-5 on Page 96 
 ## Poisson approximation to Binomial 
 ## --------------------------
 

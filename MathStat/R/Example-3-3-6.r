@@ -1,5 +1,5 @@
 ## ==========================
-## Example 3.3-6 on Page 118
+## Example 3.3-6 on Page 125
 ## --------------------------
 
 
@@ -17,5 +17,14 @@
 
 # Withoug standardization 
  pnorm(5, mean=3, sd=4) - pnorm(0, mean=3, sd=4)
+
+
+# (c) P( -2 < X < 1 )
+# After standardization
+ pnorm(-0.5) - pnorm(-1.25)
+
+# Withoug standardization 
+ pnorm(1, mean=3, sd=4) - pnorm(-2, mean=3, sd=4)
+
 
 

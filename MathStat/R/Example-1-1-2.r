@@ -1,5 +1,5 @@
 ## ==========================
-## Example 1.1-2 on Page 14 
+## Example 1.1-2 on Page 16 
 ## --------------------------
 N = 50000 # sample size
 
@@ -14,6 +14,9 @@ sum(Inside) / N
   plot( x[Inside], y[Inside],  pch=".", col="blue", xlim=c(-2,2), ylim=c(-2,2) )
 points( x[!Inside],y[!Inside], pch=".", col="red") 
 rect( -1,-1, 1, 1, border ="green4") 
+
+
+
 
 ## ==========================
 ## Example 1: Extra (Obtaining pi=3.14 using a circle)

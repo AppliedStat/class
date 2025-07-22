@@ -1,5 +1,5 @@
 ## ==========================
-## Example 2.6-1 on Page 90 
+## Example 2.7-1 on Page 94 
 ## Compare with Table III in Appendix B
 ## --------------------------
 

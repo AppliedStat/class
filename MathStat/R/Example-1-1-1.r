@@ -1,6 +1,6 @@
 ## ==========================
-## Example 1.1-1 on Page 13 
-##  (same as Example 1.4-6 on Page 40)
+## Example 1.1-1 on Page 15 
+##  (same as Example 1.4-6 on Page 42)
 ## --------------------------
 
 # E = a set of outcomes

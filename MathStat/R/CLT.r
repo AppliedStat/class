@@ -1,4 +1,4 @@
-
+# Example for CLT (central limit theorem) 
 # ===========
 # Example 1
 # ===========

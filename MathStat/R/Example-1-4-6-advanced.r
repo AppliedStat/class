@@ -1,6 +1,6 @@
 ## ==========================
-## Example 1.4-6 on Page 40
-##  (Recall Example 1.1-1 on Page 13)
+## Example 1.4-6 on Page 42
+##  (Recall Example 1.1-1 on Page 15)
 ## --------------------------
 date(); now <- proc.time()  ##############
 

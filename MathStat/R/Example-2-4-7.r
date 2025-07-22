@@ -27,6 +27,5 @@ plot(Fx, vertical=FALSE, pch=20, col="blue", ylab="F(x)" )
 # The above is better. But the below is easier. 
 xx = seq(0, 10, by = 0.1) 
 Fxx = pbinom(xx, size=10, prob=0.8)
-plot(xx, Fxx,  vertical=FALSE, type="l")
-
+plot(xx, Fxx,  type="l")
 

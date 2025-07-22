@@ -1,5 +1,5 @@
 ## ==========================
-## Example 3.2-9 on Page 110
+## Example 3.2-9 on Page 118
 ## --------------------------
 
 # Using chi-square distribution
@@ -14,3 +14,5 @@
 # Using xgamma.
 # Unit time: hour 
 1 - pgamma(9.390/60, shape=18/2, scale=2/60) 
+
+
