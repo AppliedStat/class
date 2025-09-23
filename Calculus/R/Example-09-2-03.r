@@ -12,7 +12,7 @@ det(B)
 
 # Note 
 
-det(-1)  # 1 is not a matrix
+det(-1)  # -1 is not a matrix
 
 A = matrix(-1, nrow=1) # Now A is a matrix
 A 
