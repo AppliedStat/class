@@ -28,6 +28,7 @@ qqline(data)
 # ===============================
 # What if the data are NOT from normal. 
 
+# Exponential Case
 data = rexp(100)  # The data are from exponential distribution. 
 
 n = length(data)
@@ -47,4 +48,29 @@ qqnorm(data)
 qqline(data)
 
 
+
+
+# ===============================
+# What if the data are NOT from normal. 
+
+# Student t-distribution Case
+# NOTE: Normal distribution and t-distribution both are bell-shaped. 
+data = rt(1000, df=3)
+
+
+n = length(data)
+
+i = 1:n
+
+y = sort(data)   # sample quantile 
+q = qnorm( i/ (n+1) )
+
+
+
+cbind(i, y, i/ (n+1), q)
+
+plot(y,q)
+
+qqnorm(data)
+qqline(data)
 
