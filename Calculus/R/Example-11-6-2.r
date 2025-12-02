@@ -1,4 +1,4 @@
-# Page 496 
+# Page 497
 
 f = function(x,y) x^2 + y^2 -2*x + 4*y
 

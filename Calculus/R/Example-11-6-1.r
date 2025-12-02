@@ -28,7 +28,7 @@ persp(x,y,z)
 contour(x,y,z)
 
 par( mfrow=c(1,2) )
-persp(x,y,z, theta=20, phi=55)  # same as the textbook angle. 
+persp(x,y,z, theta=20, phi=55)  # different angle
 contour(x,y,z)
 
 

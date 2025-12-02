@@ -1,9 +1,9 @@
-# Page 497 ~ 498
+# Page 501
 
-f = function(x,y) y^2 - x^2 
+f = function(x,y) x^2 + 3*y -3*x*y 
 
-x = seq(-10,10, by=1)
-y = seq(-10,10, by=1)
+x = seq(0, 2, by=0.05)
+y = seq(0, 2, by=0.05)
 z = array( dim=c(length(x), length(y) ) )
 
 for ( i in 1:length(x) ) {
@@ -13,7 +13,7 @@ for ( i in 1:length(x) ) {
 persp(x,y,z)
 contour(x,y,z)
 
-persp(x,y,z, theta=120)  # same as the textbook angle. 
+persp(x,y,z, theta=120)  # different angle.
 
 #-----------
 rm(z)
@@ -34,22 +34,23 @@ contour(x,y,z)
 # Check the following after studying Theorem 4 on Page 498.
 ###########################################################
 
-fx = function(x,y) -2*x 
-fy = function(x,y)  2*y 
+fx = function(x,y) 2*x - 3*y
+fy = function(x,y) 3 - 3*x
 
-fxx = function(x,y) -2
+fxx = function(x,y) 2 
 
-fyy = function(x,y)  2
+fyy = function(x,y) 0 
 
-fxy = function(x,y)  0
+fxy = function(x,y) -3  
 
 D = function(x,y) { fxx(x,y)*fyy(x,y) - (fxy(x,y))^2 }
 
-# at (0,0): saddle 
-f(0,0)
-fx(0,0)
-fy(0,0)
-fxx(0,0)
-fyy(0,0)
-fxy(0,0)
-D(0,0)
+# at (1,2/3)
+f(1, 2/3)
+fx(1, 2/3)
+fy(1, 2/3)
+fxx(1, 2/3)
+fyy(1, 2/3)
+fxy(1, 2/3)
+D(1, 2/3)
+

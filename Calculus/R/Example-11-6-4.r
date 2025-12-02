@@ -13,7 +13,7 @@ for ( i in 1:length(x) ) {
 persp(x,y,z)
 contour(x,y,z)
 
-persp(x,y,z, theta=120)  # same as the textbook angle. 
+persp(x,y,z, theta=120)  # different angle
 
 #-----------
 rm(z)
